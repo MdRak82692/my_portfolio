@@ -1,0 +1,120 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  background: var(--bg-dark);
+}
+
+.dashboard-sidebar {
+  background: var(--bg-darker);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sidebar-user {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--gradient-primary);
+  border-radius: 0 2px 2px 0;
+  transition: height var(--transition-base);
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.nav-item.active::before {
+  height: 70%;
+}
+
+.nav-item i {
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sidebar-footer button,
+.sidebar-footer a {
+  width: 100%;
+  justify-content: center;
+}
+
+.dashboard-main {
+  padding: var(--spacing-xl);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    position: fixed;
+    left: -280px;
+    z-index: 1000;
+    transition: left var(--transition-base);
+  }
+
+  .dashboard-sidebar.open {
+    left: 0;
+  }
+
+  .dashboard-main {
+    padding: var(--spacing-md);
+  }
+}

@@ -1,0 +1,119 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all var(--transition-base);
+  padding: var(--spacing-md) 0;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 15, 20, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-sm) 0;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform var(--transition-base);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navbar-menu a {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color var(--transition-base);
+  position: relative;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-base);
+}
+
+.navbar-menu a:hover {
+  color: var(--text-primary);
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(15, 15, 20, 0.98);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-menu a::after {
+    display: none;
+  }
+}
