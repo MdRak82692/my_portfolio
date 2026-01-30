@@ -12,10 +12,12 @@ const ProjectsManager = () => {
     description: '',
     technologies: '',
     liveUrl: '',
-    githubUrl: '',
     featured: false,
+
+    details: '',
   });
   const [imageFile, setImageFile] = useState(null);
+  const [galleryFiles, setGalleryFiles] = useState([]);
 
   useEffect(() => {
     fetchProjects();
@@ -52,11 +54,18 @@ const ProjectsManager = () => {
     data.append('description', formData.description);
     data.append('technologies', JSON.stringify(formData.technologies.split(',').map(t => t.trim())));
     data.append('liveUrl', formData.liveUrl);
-    data.append('githubUrl', formData.githubUrl);
     data.append('featured', formData.featured);
+
+    data.append('details', formData.details || '');
 
     if (imageFile) {
       data.append('image', imageFile);
+    }
+    
+    if (galleryFiles.length > 0) {
+      galleryFiles.forEach(file => {
+        data.append('images', file);
+      });
     }
 
     try {
@@ -80,8 +89,8 @@ const ProjectsManager = () => {
       description: project.description,
       technologies: project.technologies.join(', '),
       liveUrl: project.liveUrl || '',
-      githubUrl: project.githubUrl || '',
       featured: project.featured,
+      details: project.details || '',
     });
     setShowForm(true);
   };
@@ -104,10 +113,12 @@ const ProjectsManager = () => {
       description: '',
       technologies: '',
       liveUrl: '',
-      githubUrl: '',
       featured: false,
+      details: '',
     });
+
     setImageFile(null);
+    setGalleryFiles([]);
     setEditingProject(null);
     setShowForm(false);
   };
@@ -179,27 +190,42 @@ const ProjectsManager = () => {
                   onChange={handleChange}
                 />
               </div>
-
-              <div className="form-group">
-                <label className="form-label">GitHub URL</label>
-                <input
-                  type="url"
-                  name="githubUrl"
-                  className="form-input"
-                  value={formData.githubUrl}
-                  onChange={handleChange}
-                />
-              </div>
             </div>
 
+
             <div className="form-group">
-              <label className="form-label">Project Image</label>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                className="form-input"
-              />
+              <label className="form-label">Full Details (Markdown or Plain Text)</label>
+              <textarea
+                name="details"
+                className="form-textarea"
+                value={formData.details || ''}
+                onChange={handleChange}
+                rows="6"
+                placeholder="Detailed explanation of the project..."
+              ></textarea>
+            </div>
+
+            <div className="grid grid-2">
+              <div className="form-group">
+                <label className="form-label">Main Project Image</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Gallery Images (Multiple)</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  onChange={(e) => setGalleryFiles(Array.from(e.target.files))}
+                  className="form-input"
+                />
+              </div>
             </div>
 
             <div className="form-group">

@@ -12,6 +12,9 @@ const ProfileManager = () => {
     title: '',
     email: '',
     bio: '',
+    phone: '',
+    location: '',
+
     social: {
       github: '',
       linkedin: '',
@@ -39,6 +42,9 @@ const ProfileManager = () => {
         title: data.title || '',
         email: data.email || '',
         bio: data.bio || '',
+        phone: data.phone || '',
+        location: data.location || '',
+
         social: {
           github: data.social?.github || '',
           linkedin: data.social?.linkedin || '',
@@ -101,6 +107,9 @@ const ProfileManager = () => {
       data.append('title', formData.title);
       data.append('email', formData.email);
       data.append('bio', formData.bio);
+      data.append('phone', formData.phone);
+      data.append('location', formData.location);
+
       data.append('social', JSON.stringify(formData.social));
 
       if (avatarFile) {
@@ -222,6 +231,32 @@ const ProfileManager = () => {
                 rows="4"
               ></textarea>
             </div>
+
+            <div className="grid-2">
+              <div className="form-group">
+                <label className="form-label">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="e.g. +880123456789"
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="e.g. Dhaka, Bangladesh"
+                />
+              </div>
+            </div>
+
             
              <div className="form-group">
               <label className="form-label">Resume / CV (PDF)</label>

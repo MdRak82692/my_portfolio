@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { profileAPI } from '../../services/api';
 import './Hero.css';
 
@@ -37,9 +39,9 @@ const Hero = () => {
             <p className="hero-bio">{profile.bio}</p>
 
             <div className="hero-actions">
-              <a href="#contact" className="btn btn-primary btn-lg">
+              <Link to="/contact" className="btn btn-primary btn-lg">
                 Get In Touch
-              </a>
+              </Link>
               {profile.resume && (
                 <a 
                   href={`http://localhost:5000${profile.resume}`} 

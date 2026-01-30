@@ -10,6 +10,14 @@ import SkillsManager from './pages/Dashboard/SkillsManager/SkillsManager';
 import ExperienceManager from './pages/Dashboard/ExperienceManager/ExperienceManager';
 import MessagesManager from './pages/Dashboard/MessagesManager/MessagesManager';
 import EducationManager from './pages/Dashboard/EducationManager/EducationManager';
+import ProjectsPage from './pages/Projects/ProjectsPage';
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
+import SkillsPage from './pages/Skills/SkillsPage';
+import ExperiencePage from './pages/Experience/ExperiencePage';
+import EducationPage from './pages/Education/EducationPage';
+import ContactPage from './pages/Contact/ContactPage';
+
+
 
 import './index.css';
 
@@ -40,6 +48,12 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<Login />} />
 
           {/* Protected Admin Routes */}

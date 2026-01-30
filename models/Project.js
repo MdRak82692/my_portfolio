@@ -18,6 +18,9 @@ const projectSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  images: [{
+    type: String
+  }],
   liveUrl: {
     type: String,
     trim: true
@@ -29,6 +32,10 @@ const projectSchema = new mongoose.Schema({
   featured: {
     type: Boolean,
     default: false
+  },
+  details: {
+    type: String,
+    default: ''
   },
   order: {
     type: Number,

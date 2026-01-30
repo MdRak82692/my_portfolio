@@ -54,15 +54,23 @@ router.get('/:id', async (req, res) => {
 // @route   POST /api/projects
 // @desc    Create project
 // @access  Private
-router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
+router.post('/', authMiddleware, upload.fields([
+  { name: 'image', maxCount: 1 },
+  { name: 'images', maxCount: 10 }
+]), async (req, res) => {
   try {
     const projectData = {
       ...req.body,
       technologies: req.body.technologies ? JSON.parse(req.body.technologies) : []
     };
 
-    if (req.file) {
-      projectData.image = `/uploads/${req.file.filename}`;
+    if (req.files) {
+      if (req.files.image) {
+        projectData.image = `/uploads/${req.files.image[0].filename}`;
+      }
+      if (req.files.images) {
+        projectData.images = req.files.images.map(file => `/uploads/${file.filename}`);
+      }
     }
 
     const project = new Project(projectData);
@@ -85,15 +93,29 @@ router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
 // @route   PUT /api/projects/:id
 // @desc    Update project
 // @access  Private
-router.put('/:id', authMiddleware, upload.single('image'), async (req, res) => {
+router.put('/:id', authMiddleware, upload.fields([
+  { name: 'image', maxCount: 1 },
+  { name: 'images', maxCount: 10 }
+]), async (req, res) => {
   try {
     const updateData = {
       ...req.body,
       technologies: req.body.technologies ? JSON.parse(req.body.technologies) : []
     };
 
-    if (req.file) {
-      updateData.image = `/uploads/${req.file.filename}`;
+    if (req.files) {
+      if (req.files.image) {
+        updateData.image = `/uploads/${req.files.image[0].filename}`;
+      }
+      if (req.files.images) {
+        const newImages = req.files.images.map(file => `/uploads/${file.filename}`);
+        if (req.body.keepExistingImages === 'true') {
+           const existingProject = await Project.findById(req.params.id);
+           updateData.images = [...(existingProject.images || []), ...newImages];
+        } else {
+           updateData.images = newImages;
+        }
+      }
     }
 
     const project = await Project.findByIdAndUpdate(
