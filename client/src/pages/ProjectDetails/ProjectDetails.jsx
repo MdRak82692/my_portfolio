@@ -14,6 +14,18 @@ const ProjectDetails = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
+  const allImages = project ? [project.image, ...(project.images || [])].filter(img => img) : [];
+
+  useEffect(() => {
+    if (allImages.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % allImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [id, allImages.length]);
+
   if (!project) {
     return (
       <div className="project-details-page">
@@ -26,8 +38,6 @@ const ProjectDetails = () => {
     );
   }
 
-  const allImages = [project.image, ...(project.images || [])].filter(img => img);
-
   return (
     <div className="project-details-page">
       <Navbar />
@@ -38,12 +48,15 @@ const ProjectDetails = () => {
         
         <div className="project-details-grid">
           <div className="project-gallery">
-            <div className="main-image card">
-              <img 
-                src={allImages[activeImage].startsWith('http') ? allImages[activeImage] : allImages[activeImage]} 
-                alt={project.title} 
-              />
-
+            <div className="main-image-container card">
+              <div className="scrolling-image-wrapper">
+                <img 
+                  key={activeImage}
+                  src={allImages[activeImage]} 
+                  alt={project.title} 
+                  className="scrolling-image"
+                />
+              </div>
             </div>
             {allImages.length > 1 && (
               <div className="thumbnail-grid mt-2">
@@ -81,13 +94,23 @@ const ProjectDetails = () => {
               )}
             </div>
 
-            <div className="project-actions flex gap-2">
-              {project.liveUrl && (
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              )}
+            <div className="project-actions-container mt-4">
+              <div className="project-actions flex flex-wrap gap-3">
+                {project.playStoreUrl && (
+                  <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary store-btn">
+                    <i className="fab fa-google-play"></i> 
+                    <span>Google Play</span>
+                  </a>
+                )}
+                {project.appStoreUrl && (
+                  <a href={project.appStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary store-btn">
+                    <i className="fab fa-apple"></i> 
+                    <span>App Store</span>
+                  </a>
+                )}
+              </div>
             </div>
+
           </div>
         </div>
       </div>

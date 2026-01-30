@@ -1,3 +1,89 @@
+.professional-journey {
+  padding: var(--spacing-2xl) 0;
+  position: relative;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.journey-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  height: 100%;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.journey-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-darker);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border);
+}
+
+.journey-card h3 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.journey-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.btn-text {
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+  transition: gap var(--transition-fast);
+}
+
+.journey-card:hover .journey-icon {
+  background: var(--gradient-primary);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.journey-card:hover .btn-text {
+  gap: var(--spacing-sm);
+}
+
+.journey-card.highlight {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(244, 63, 94, 0.05) 100%);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
 .footer {
   background: var(--bg-darker);
   padding: var(--spacing-xl) 0;
@@ -8,4 +94,10 @@
 .footer p {
   color: var(--text-muted);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
 }

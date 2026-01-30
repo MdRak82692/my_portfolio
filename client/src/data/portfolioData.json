@@ -2,12 +2,12 @@
   "profile": {
     "name": "Md Rakib",
     "title": "Flutter Developer",
-    "bio": "I am a passionate developer with experience in building modern web applications.",
+    "bio": "I am a passionate Flutter developer with 1+ years of experience in building high-quality mobile applications and modern user interfaces. Specialized in creating scalable cross-platform solutions with a focus on seamless user experience.",
     "email": "mdrak82692@gmail.com",
     "phone": "+8801716661635",
     "location": "Banasree, Dhaka, Bangladesh",
     "avatar": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769756389/52038_A_ktqc9p.jpg",
-    "resume": "/uploads/resume-placeholder.pdf",
+    "resume": "https://drive.google.com/file/d/1-qoqLYPbFn5zVDwz2gjXsE7oC5Z_wLix/view?usp=sharing",
     "social": {
       "github": "https://github.com/MdRak82692",
       "linkedin": "https://www.linkedin.com/in/md-rakib-b62287194/",
@@ -16,86 +16,110 @@
   },
   "projects": [
     {
-      "id": "1",
-      "title": "E-Commerce Platform",
-      "description": "A full-featured online store built with React and Node.js.",
-      "details": "This project involved creating a complex checkout system, integration with payment gateways, and a responsive admin dashboard for inventory management.",
-      "technologies": ["React", "Node.js", "MongoDB", "Redux"],
-      "image": "/uploads/project1.png",
-      "images": ["/uploads/project1-detail1.png", "/uploads/project1-detail2.png"],
-      "liveUrl": "https://example-shop.com",
+      "id": "levaro",
+      "title": "Levaro – Service Marketplace Application",
+      "description": "Service provider & service booking platform where providers can create profiles, publish services, and manage requests.",
+      "details": "Levaro is a sophisticated marketplace platform designed to bridge the gap between service providers and consumers. As a lead Flutter developer, I implemented a dual-app architecture within a single codebase. \n\nKey features include:\n• Dynamic Profile Creation: Providers can showcase their expertise, portfolio, and pricing.\n• Real-time Service Management: Instant updates for service listings and availability.\n• Booking Flow: A streamlined end-to-end booking process with status tracking (Pending, Accepted, Ongoing, Completed).\n• Interactive Dashboard: Comprehensive insights for both consumers and providers to manage their interactions efficiently.\n\nThe app emphasizes performance through optimized state management and a responsive design that ensures a premium feel across both Android and iOS devices.",
+      "technologies": ["Flutter", "Dart", "Firebase", "REST API", "Provider", "Push Notification", "GetX"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769011/On_boarding_kmvail.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769010/On_boarding_1_uzai10.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769015/Gemini_Generated_Image_9dj2le9dj2le9dj2_ofjmni.png",  "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769009/Gemini_Generated_Image_2uzkpe2uzkpe2uzk_iek3zf.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769179/Gemini_Generated_Image_g0m66yg0m66yg0m6_wi557p.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769008/Gemini_Generated_Image_cgwcn5cgwcn5cgwc_kf6pih.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769008/Chat_wyha4k.jpg","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769939/Chat_2_xmptgi.jpg" ],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.levaro.app.levaro&pcampaignid=web_share",
+      "appStoreUrl": "https://apps.apple.com/us/app/levaro/id6754184610",
       "featured": true,
       "order": 1
     },
     {
-      "id": "2",
-      "title": "Portfolio Website",
-      "description": "A sleek and modern portfolio template for developers.",
-      "details": "Designed with a focus on performance and SEO, this portfolio uses glassmorphism and modern CSS techniques.",
-      "technologies": ["React", "Framer Motion", "CSS3"],
-      "image": "/uploads/project2.png",
-      "images": [],
-      "liveUrl": "",
+      "id": "neowash",
+      "title": "Neowash – Car Wash Booking Application",
+      "description": "On-demand car wash booking app allowing users to select car type, model, date, and time.",
+      "details": "Neowash revolutionizes the traditional car wash experience by bringing it to the user's fingertips. This application focuses on high-precision scheduling and customization.\n\nTechnological Highlights:\n• Intelligent Categorization: Users can select specific car types (Sedan, SUV, Hatchback) and models, with the app dynamically calculating service duration and pricing.\n• Calendar Integration: A robust time-slot booking system that prevents overbooking and ensures service provider efficiency.\n• Location Services: Integrated map functionality for users to locate nearby service zones or set their own location for home services.\n• Push Notifications: Stay updated with real-time alerts regarding booking status and upcoming service reminders.\n\nThe UI was crafted using custom animations and a sleek 'glassmorphism' aesthetic to provide a modern, high-tech experience for automotive enthusiasts.",
+     "technologies": ["Flutter", "Dart", "Firebase", "REST API", "Provider", "Push Notification", "GetX"],
+       "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769562/Onboarding_ncdoh1.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769560/Log_In_uimydx.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769559/Home_yp6xns.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769557/Service_details_h1dqr7.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769556/Service_details_1_sylani.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769554/Home_1_dbvsz3.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769553/Appointment_un019h.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769551/My_Bookings_ml0kqq.png"],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.neowash.user.neowash&pcampaignid=web_share",
+      "appStoreUrl": "https://apps.apple.com/us/app/neo-wash/id6746198051",
       "featured": true,
       "order": 2
+    },
+    {
+      "id": "money-saving",
+      "title": "Money Saving App – Personal Finance Management",
+      "description": "Expense and savings tracking app with bill payment reminders and budgeting tools.",
+      "details": "The Money Saving App is a personal financial companion designed to promote better saving habits and financial literacy. It simplifies complex financial tracking into an intuitive daily routine.\n\nCore Functionality:\n• Automated Tracking: Seamlessly record income and expenses with categorized breakdown (Food, Rent, Entertainment, etc.).\n• Budget Planning: Set monthly or weekly limits for different categories with visual progress indicators.\n• Data Visualization: Implemented advanced charting libraries to show spending patterns over time, helping users identify where they can save.\n• Bill Reminders: Never miss a payment with custom notification scheduling for recurring bills.\n• Secure Storage: Utilized local encrypted storage for sensitive financial data, ensuring user privacy.\n\nThis project showcased my ability to handle complex data structures and state management while maintaining a clean, distraction-free user interface.",
+     "technologies": ["Flutter", "Dart", "Firebase", "REST API", "Provider", "Push Notification", "GetX"],
+       "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769832/Splash_screen_mth4qj.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769831/Onboarding_screen_ow0fey.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769829/Log_in_Screen_ri5es8.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769827/Home_Screen_g0mdzw.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769826/Budget_Blueprint_Screen_mfy34i.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769824/Allowance_Tracker_Screen_gln9o7.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769822/All_Transaction_History_euxjq5.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769769821/Savings_Dashboard_Screen_kfkyda.png"],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.money.saving.app&pcampaignid=web_share",
+      "appStoreUrl": "https://apps.apple.com/us/app/money-saving-techniques/id6755509963",
+      "featured": true,
+      "order": 3
     }
   ],
   "skills": [
     {
-      "name": "JavaScript",
+      "name": "Flutter & Dart",
+      "level": 95,
+      "category": "Core Development",
+      "icon": "fas fa-mobile-alt"
+    },
+    {
+      "name": "Firebase",
       "level": 90,
-      "category": "Frontend",
-      "icon": "fab fa-js"
-    },
-    {
-      "name": "React",
-      "level": 85,
-      "category": "Frontend",
-      "icon": "fab fa-react"
-    },
-    {
-      "name": "Node.js",
-      "level": 80,
       "category": "Backend",
-      "icon": "fab fa-node-js"
+      "icon": "fas fa-fire"
     },
     {
-      "name": "MongoDB",
-      "level": 75,
+      "name": "REST API Integration",
+      "level": 90,
+      "category": "Networking",
+      "icon": "fas fa-link"
+    },
+    {
+      "name": "MongoDB & MySQL",
+      "level": 80,
       "category": "Database",
       "icon": "fas fa-database"
+    },
+    {
+      "name": "Cross-Platform Dev",
+      "level": 95,
+      "category": "Core Development",
+      "icon": "fas fa-layer-group"
+    },
+    {
+      "name": "App Store Deployment",
+      "level": 85,
+      "category": "DevOps",
+      "icon": "fab fa-app-store"
+    },
+    {
+      "name": "Payment Integration",
+      "level": 85,
+      "category": "Fintech",
+      "icon": "fas fa-credit-card"
     }
   ],
   "experience": [
     {
-      "company": "Tech Solutions Inc.",
-      "position": "Senior Web Developer",
-      "location": "Remote",
-      "startDate": "2022-01-01",
+      "company": "SM Technology",
+      "position": "Junior Flutter Developer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "2025-03-01",
       "endDate": "",
       "current": true,
-      "description": "Leading the frontend development team and maintaining high-scale production apps."
-    },
-    {
-      "company": "Creative Agency",
-      "position": "Junior Developer",
-      "location": "Dhaka",
-      "startDate": "2020-01-01",
-      "endDate": "2021-12-31",
-      "current": false,
-      "description": "Developed several client websites using HTML, CSS, and basic JavaScript."
+      "description": "• Developed and deployed live mobile applications.\n• Integrated Firebase authentication, real-time database, and APIs.\n• Collaborated with backend and UI/UX teams."
     }
   ],
   "education": [
     {
-      "institution": "University of Technology",
-      "degree": "B.Sc. in Computer Science",
-      "fieldOfStudy": "Software Engineering",
-      "startDate": "2016-01-01",
-      "endDate": "2020-01-01",
+      "institution": "International Islamic University Chittagong",
+      "degree": "B.Sc. in Electronics & Telecommunication Engineering (ETE)",
+      "fieldOfStudy": "Engineering",
+      "startDate": "2019-01-01",
+      "endDate": "2023-12-31",
       "current": false,
-      "grade": "3.8/4.0",
-      "description": "Focused on algorithms, data structures, and web technologies."
+      "grade": "GPA: 3.77",
+      "description": "Focus on communication systems, electronics, and software integration."
     }
   ]
 }

@@ -29,13 +29,13 @@ const Hero = () => {
               </Link>
               {profile.resume && (
                 <a 
-                  href={profile.resume.startsWith('http') ? profile.resume : profile.resume} 
+                  href={profile.resume} 
                   className="btn btn-secondary btn-lg"
-
+                  download={profile.resume}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download Resume
+                  <i className="fas fa-download"></i> Download Resume
                 </a>
               )}
             </div>
