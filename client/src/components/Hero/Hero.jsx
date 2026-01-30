@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import { profileAPI } from '../../services/api';
+import portfolioData from '../../data/portfolioData.json';
 import './Hero.css';
 
 const Hero = () => {
-  const [profile, setProfile] = useState(null);
-
-  useEffect(() => {
-    fetchProfile();
-  }, []);
-
-  const fetchProfile = async () => {
-    try {
-      const response = await profileAPI.get();
-      setProfile(response.data.data);
-    } catch (error) {
-      console.error('Error fetching profile:', error);
-    }
-  };
+  const profile = portfolioData.profile;
 
   if (!profile) return null;
 
@@ -44,8 +29,9 @@ const Hero = () => {
               </Link>
               {profile.resume && (
                 <a 
-                  href={`http://localhost:5000${profile.resume}`} 
+                  href={profile.resume.startsWith('http') ? profile.resume : profile.resume} 
                   className="btn btn-secondary btn-lg"
+
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -81,7 +67,7 @@ const Hero = () => {
           {profile.avatar && (
             <div className="hero-image fade-in">
               <div className="image-wrapper">
-                <img src={`http://localhost:5000${profile.avatar}`} alt={profile.name} />
+                <img src={profile.avatar.startsWith('http') ? profile.avatar : profile.avatar} alt={profile.name} />
               </div>
             </div>
           )}

@@ -1,40 +1,18 @@
 import { useEffect, useState } from 'react';
+
 import { useParams, Link } from 'react-router-dom';
-import { projectsAPI } from '../../services/api';
 import Navbar from '../../components/Navbar/Navbar';
+import portfolioData from '../../data/portfolioData.json';
 import './ProjectDetails.css';
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  const [project, setProject] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [activeImage, setActiveImage] = useState(0);
+  const project = portfolioData.projects.find(p => p.id === id);
 
   useEffect(() => {
-    const fetchProject = async () => {
-      try {
-        const response = await projectsAPI.getOne(id);
-        setProject(response.data.data);
-      } catch (error) {
-        console.error('Error fetching project:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProject();
     window.scrollTo(0, 0);
   }, [id]);
-
-  if (loading) {
-    return (
-      <div className="project-details-page">
-        <Navbar />
-        <div className="container text-center py-5">
-          <div className="spinner" style={{ margin: '100px auto' }}></div>
-        </div>
-      </div>
-    );
-  }
 
   if (!project) {
     return (
@@ -62,9 +40,10 @@ const ProjectDetails = () => {
           <div className="project-gallery">
             <div className="main-image card">
               <img 
-                src={`http://localhost:5000${allImages[activeImage]}`} 
+                src={allImages[activeImage].startsWith('http') ? allImages[activeImage] : allImages[activeImage]} 
                 alt={project.title} 
               />
+
             </div>
             {allImages.length > 1 && (
               <div className="thumbnail-grid mt-2">
@@ -74,7 +53,8 @@ const ProjectDetails = () => {
                     className={`thumbnail card ${activeImage === index ? 'active' : ''}`}
                     onClick={() => setActiveImage(index)}
                   >
-                    <img src={`http://localhost:5000${img}`} alt={`${project.title} thumb ${index}`} />
+                    <img src={img.startsWith('http') ? img : img} alt={`${project.title} thumb ${index}`} />
+
                   </div>
                 ))}
               </div>

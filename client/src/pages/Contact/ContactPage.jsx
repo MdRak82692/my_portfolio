@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-
-import { contactAPI, profileAPI } from '../../services/api';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 import Navbar from '../../components/Navbar/Navbar';
+import portfolioData from '../../data/portfolioData.json';
 import './ContactPage.css';
 
 const ContactPage = () => {
-  const [profile, setProfile] = useState(null);
+  const profile = portfolioData.profile;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,18 +15,6 @@ const ContactPage = () => {
   });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await profileAPI.get();
-        setProfile(response.data.data);
-      } catch (error) {
-        console.error('Error fetching profile:', error);
-      }
-    };
-    fetchProfile();
-  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,13 +25,38 @@ const ContactPage = () => {
     setLoading(true);
     setStatus({ type: '', message: '' });
 
+    const SERVICE_ID = 'service_uk1gipr';
+    const TEMPLATE_ID = 'template_l9aqoc3';
+    const PUBLIC_KEY = 'z0rMLL83Ro0bLI9E7';
+
     try {
-      await contactAPI.submit(formData);
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: profile.email,
+        sent_at: new Date().toLocaleString('en-GB', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        })
+      };
+
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      
       setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again later.' });
+      setStatus({ 
+        type: 'error', 
+        message: `Failed to send message: ${error?.text || 'Check your EmailJS keys or variables'}` 
+      });
     } finally {
       setLoading(false);
     }

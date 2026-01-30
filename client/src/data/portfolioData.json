@@ -1,0 +1,101 @@
+{
+  "profile": {
+    "name": "Md Rakib",
+    "title": "Flutter Developer",
+    "bio": "I am a passionate developer with experience in building modern web applications.",
+    "email": "mdrak82692@gmail.com",
+    "phone": "+8801716661635",
+    "location": "Banasree, Dhaka, Bangladesh",
+    "avatar": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769756389/52038_A_ktqc9p.jpg",
+    "resume": "/uploads/resume-placeholder.pdf",
+    "social": {
+      "github": "https://github.com/MdRak82692",
+      "linkedin": "https://www.linkedin.com/in/md-rakib-b62287194/",
+      "facebook": "https://www.facebook.com/md.rakib.125020"
+    }
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-Commerce Platform",
+      "description": "A full-featured online store built with React and Node.js.",
+      "details": "This project involved creating a complex checkout system, integration with payment gateways, and a responsive admin dashboard for inventory management.",
+      "technologies": ["React", "Node.js", "MongoDB", "Redux"],
+      "image": "/uploads/project1.png",
+      "images": ["/uploads/project1-detail1.png", "/uploads/project1-detail2.png"],
+      "liveUrl": "https://example-shop.com",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "2",
+      "title": "Portfolio Website",
+      "description": "A sleek and modern portfolio template for developers.",
+      "details": "Designed with a focus on performance and SEO, this portfolio uses glassmorphism and modern CSS techniques.",
+      "technologies": ["React", "Framer Motion", "CSS3"],
+      "image": "/uploads/project2.png",
+      "images": [],
+      "liveUrl": "",
+      "featured": true,
+      "order": 2
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": 90,
+      "category": "Frontend",
+      "icon": "fab fa-js"
+    },
+    {
+      "name": "React",
+      "level": 85,
+      "category": "Frontend",
+      "icon": "fab fa-react"
+    },
+    {
+      "name": "Node.js",
+      "level": 80,
+      "category": "Backend",
+      "icon": "fab fa-node-js"
+    },
+    {
+      "name": "MongoDB",
+      "level": 75,
+      "category": "Database",
+      "icon": "fas fa-database"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Tech Solutions Inc.",
+      "position": "Senior Web Developer",
+      "location": "Remote",
+      "startDate": "2022-01-01",
+      "endDate": "",
+      "current": true,
+      "description": "Leading the frontend development team and maintaining high-scale production apps."
+    },
+    {
+      "company": "Creative Agency",
+      "position": "Junior Developer",
+      "location": "Dhaka",
+      "startDate": "2020-01-01",
+      "endDate": "2021-12-31",
+      "current": false,
+      "description": "Developed several client websites using HTML, CSS, and basic JavaScript."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "B.Sc. in Computer Science",
+      "fieldOfStudy": "Software Engineering",
+      "startDate": "2016-01-01",
+      "endDate": "2020-01-01",
+      "current": false,
+      "grade": "3.8/4.0",
+      "description": "Focused on algorithms, data structures, and web technologies."
+    }
+  ]
+}

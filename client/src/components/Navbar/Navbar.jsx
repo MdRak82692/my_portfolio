@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useAuth } from '../../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,15 +40,6 @@ const Navbar = () => {
             <Link to="/experience" onClick={() => setMenuOpen(false)}>Experience</Link>
             <Link to="/education" onClick={() => setMenuOpen(false)}>Education</Link>
             <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-            {isAuthenticated ? (
-              <Link to="/admin/dashboard" className="btn btn-primary btn-sm">
-                Dashboard
-              </Link>
-            ) : (
-              <Link to="/admin" className="btn btn-primary btn-sm">
-                Login
-              </Link>
-            )}
           </div>
         </div>
       </div>
