@@ -62,6 +62,7 @@ app.use('/api/skills', require('./routes/skills'));
 app.use('/api/experience', require('./routes/experience'));
 app.use('/api/contact', require('./routes/contact'));
 app.use('/api/profile', require('./routes/profile'));
+app.use('/api/education', require('./routes/education'));
 
 // Health check
 app.get('/api/health', (req, res) => {

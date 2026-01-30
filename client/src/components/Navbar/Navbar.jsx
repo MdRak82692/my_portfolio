@@ -36,11 +36,12 @@ const Navbar = () => {
           </button>
 
           <div className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
-            <a href="/home" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="/projects" onClick={() => setMenuOpen(false)}>Projects</a>
-            <a href="/skills" onClick={() => setMenuOpen(false)}>Skills</a>
-            <a href="/experience" onClick={() => setMenuOpen(false)}>Experience</a>
-            <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+            <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             {isAuthenticated ? (
               <Link to="/admin/dashboard" className="btn btn-primary btn-sm">
                 Dashboard

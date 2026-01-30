@@ -18,6 +18,7 @@ const Dashboard = () => {
     { path: '/admin/dashboard/projects', label: 'Projects', icon: 'fas fa-folder' },
     { path: '/admin/dashboard/skills', label: 'Skills', icon: 'fas fa-code' },
     { path: '/admin/dashboard/experience', label: 'Experience', icon: 'fas fa-briefcase' },
+    { path: '/admin/dashboard/education', label: 'Education', icon: 'fas fa-graduation-cap' },
     { path: '/admin/dashboard/messages', label: 'Messages', icon: 'fas fa-envelope' },
   ];
 

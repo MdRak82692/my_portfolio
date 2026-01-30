@@ -39,6 +39,11 @@ const DashboardHome = () => {
           <h3>Messages</h3>
           <p>View contact messages</p>
         </Link>
+        <Link to="/admin/dashboard/education" className="quick-link-card card">
+          <i className="fas fa-graduation-cap"></i>
+          <h3>Education</h3>
+          <p>Manage your academic history</p>
+        </Link>
 
         <Link to="/" className="quick-link-card card">
           <i className="fas fa-eye"></i>

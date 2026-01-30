@@ -69,4 +69,12 @@ export const profileAPI = {
   }),
 };
 
+// Education API
+export const educationAPI = {
+  getAll: () => api.get('/education'),
+  create: (data) => api.post('/education', data),
+  update: (id, data) => api.put(`/education/${id}`, data),
+  delete: (id) => api.delete(`/education/${id}`),
+};
+
 export default api;

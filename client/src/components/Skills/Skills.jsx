@@ -56,7 +56,10 @@ const Skills = () => {
                 {categorySkills.map((skill) => (
                   <div key={skill._id} className="skill-item">
                     <div className="skill-header">
-                      <span className="skill-name">{skill.name}</span>
+                      <div className="skill-title-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        {skill.icon && <i className={`${skill.icon} text-primary`}></i>}
+                        <span className="skill-name">{skill.name}</span>
+                      </div>
                       <span className="skill-level">{skill.level}%</span>
                     </div>
                     <div className="skill-bar">

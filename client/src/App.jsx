@@ -5,6 +5,12 @@ import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
 import ProjectsManager from './pages/Dashboard/ProjectsManager/ProjectsManager';
+import ProfileManager from './pages/Dashboard/ProfileManager/ProfileManager';
+import SkillsManager from './pages/Dashboard/SkillsManager/SkillsManager';
+import ExperienceManager from './pages/Dashboard/ExperienceManager/ExperienceManager';
+import MessagesManager from './pages/Dashboard/MessagesManager/MessagesManager';
+import EducationManager from './pages/Dashboard/EducationManager/EducationManager';
+
 import './index.css';
 
 // Protected Route Component
@@ -46,8 +52,12 @@ function App() {
             }
           >
             <Route index element={<DashboardHome />} />
+            <Route path="profile" element={<ProfileManager />} />
             <Route path="projects" element={<ProjectsManager />} />
-            {/* Add more routes as needed */}
+            <Route path="skills" element={<SkillsManager />} />
+            <Route path="experience" element={<ExperienceManager />} />
+            <Route path="education" element={<EducationManager />} />
+            <Route path="messages" element={<MessagesManager />} />
           </Route>
         </Routes>
       </Router>
