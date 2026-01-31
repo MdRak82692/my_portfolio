@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   FolderOpen, 
-  LaptopCode, 
+  Code2, 
   Briefcase, 
   Send,
   ArrowRight,
@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
+import portfolioData from '../../data/portfolioData.json';
 import './Home.css';
 
 const Home = () => {
@@ -48,7 +49,7 @@ const Home = () => {
       title: 'My Skills',
       description: 'Technical expertise and toolset breakdown',
       path: '/skills',
-      icon: <LaptopCode size={32} />,
+      icon: <Code2 size={32} />,
       color: 'secondary',
       btnText: 'See Expertise'
     },
@@ -71,41 +72,23 @@ const Home = () => {
     }
   ];
 
-  const stats = [
-    { label: 'Experience', value: '3+ Years', icon: <Briefcase size={20} /> },
-    { label: 'Projects Done', value: '25+', icon: <Trophy size={20} /> },
-    { label: 'Happy Clients', value: '15+', icon: <Users size={20} /> },
-    { label: 'Success Rate', value: '100%', icon: <Target size={20} /> }
-  ];
+  const getStatIcon = (label) => {
+    switch (label) {
+      case 'Experience': return <Briefcase size={20} />;
+      case 'Projects Done': return <Trophy size={20} />;
+      case 'Happy Clients': return <Users size={20} />;
+      case 'Success Rate': return <Target size={20} />;
+      default: return <Trophy size={20} />;
+    }
+  };
+
+  const stats = portfolioData.profile.stats || [];
 
   return (
     <div className="home-page">
       <Navbar />
       <Hero />
 
-      {/* Stats Bar */}
-      <section className="stats-bar">
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={index}
-                className="stat-item"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="stat-icon-wrapper">{stat.icon}</div>
-                <div className="stat-info">
-                  <span className="stat-value">{stat.value}</span>
-                  <span className="stat-label">{stat.label}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Journey Section */}
       <section className="professional-journey section-spacing">
