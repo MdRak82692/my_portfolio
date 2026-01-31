@@ -11,9 +11,11 @@ import ContactPage from './pages/Contact/ContactPage';
 
 import './index.css';
 
+const basename = import.meta.env.MODE === 'production' ? '/my_portfolio' : '';
+
 function App() {
   return (
-    <Router basename="/my_portfolio">
+    <Router basename={basename}>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />

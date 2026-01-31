@@ -53,6 +53,61 @@
       "appStoreUrl": "https://apps.apple.com/us/app/money-saving-techniques/id6755509963",
       "featured": true,
       "order": 3
+    },
+    {
+      "id": "vibe",
+      "title": "Vibe – Multi-Service Platform",
+      "description": "An Uber-style application for ride-sharing, food delivery, and parcel sending services.",
+      "details": "Vibe is a comprehensive multi-service ecosystem designed to simplify urban logistics and daily needs. \n\nKey Capabilities:\n• Ride-Sharing: Real-time driver matching with dynamic fare calculation and route optimization.\n• Food Delivery: Integrated restaurant marketplace with live order tracking and multiple payment options.\n• Parcel Service: On-demand delivery for documents and packages with secure verification.\n• Centralized Wallet: Unified payment system for all platform services.\n\nThe application utilizes advanced geospatial services and real-time data streaming to ensure a seamless experience for users and service providers alike.",
+      "technologies": ["Flutter", "Dart", "Google Maps API", "Firebase", "Socket.IO", "REST API"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839355/Splash_hebo31.png",
+      "images":["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839358/Home_uzynq1.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839359/Home_2_o8bkzl.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839357/Booking_wiuiid.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839361/Track_bl5aom.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839356/Choose_vehicle_zp9ure.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839362/Home_1_dwgwxd.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769839361/Track_bl5aom.png"],
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "advocatorio",
+      "title": "Advocatorio – Legal Service Marketplace",
+      "description": "Professional booking platform for lawyers and law firms featuring live consultations and webinars.",
+      "details": "Advocatorio is a high-end legal tech platform connecting clients with legal professionals. \n\nSophisticated Features:\n• Professional Matching: Advanced search for lawyers and law firms based on specialization and rating.\n• Webinar Integration: Integrated Zoom support for online legal events and seminars.\n• Resource Center: E-book and course marketplace for legal education.\n• Real-time Collaboration: Secure chat with document sharing, image previews, and direct Zoom meeting creation.\n• Advanced Notifications: Complex push notification system for meeting reminders and legal updates.\n\nThis project focuses on security and confidentiality, providing a trusted environment for professional legal interactions.",
+      "technologies": ["Flutter", "Dart", "Zoom SDK", "Firebase", "Cloud Functions", "Push Notification", "Web Sockets", "REST API", "FlutterFire"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837455/Splash_trwbbx.png",
+      "images":["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837457/Home_regaqs.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837456/Home_1_pn53hv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837457/Gemini_Generated_Image_bubu2bubu2bubu2b_ooivsn.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837456/Product_list_loktys.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837457/Gemini_Generated_Image_xvw1e1xvw1e1xvw1_efhgtx.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837457/Gemini_Generated_Image_fabz8rfabz8rfabz_i36dyh.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769837455/All_Events_avwv1y.png"],
+      "featured": true,
+      "order": 5
+    },
+    {
+      "id": "dakar-go",
+      "title": "Dakar Go – Travel & Hospitality Hub",
+      "description": "All-in-one travel app for hotel bookings, tour planning, and customer support.",
+      "details": "Dakar Go streamlines the travel planning process, offering a centralized hub for tourists and travelers.\n\nCore Features:\n• Smart Booking: Real-time availability for hotels and curated tour packages.\n• History Tracking: Comprehensive overview of all past and upcoming travel itineraries.\n• Integrated Support: Direct messaging system to admin for travel assistance and queries.\n• Instant Alerts: Notification-driven support responses and booking confirmations.\n\nThe app's clean, travel-oriented UI focuses on ease of use and quick access to essential travel information.",
+      "technologies": ["Flutter", "Dart", "REST API", "Firebase", "Push Notification", "Cloud Messaging"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838045/Onboarding_9_yfiawj.png",
+      "images":["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838046/home_aeewlr.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838051/Gemini_Generated_Image_e35iide35iide35i_e2vigw.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838047/hotel_ptvb8r.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838048/Gemini_Generated_Image_nuwtmanuwtmanuwt_wni4fr.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838048/Gemini_Generated_Image_4ahgs34ahgs34ahg_zkhhdp.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838046/travel_with_agency_y8qraf.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838048/Gemini_Generated_Image_7jia8s7jia8s7jia_dzxb5w.png"],
+      "featured": true,
+      "order": 6
+    },
+    {
+      "id": "goltz-asphalt",
+      "title": "Goltz Asphalt – Company Management System",
+      "description": "Internal management solution for workplace tracking, task reporting, and administrative control.",
+      "details": "Goltz Asphalt is a specialized workforce management tool designed for the construction and maintenance industry.\n\nOperational Highlights:\n• Daily Reporting: Streamlined interface for workers to upload daily task progress and photos.\n• Admin Oversight: Real-time monitoring dashboard for management to track field operations.\n• User Management: Direct admin capability to create and manage employee accounts within the app.\n• Efficiency Tracking: Automated time logs and task completion metrics.\n\nThis B2B solution enhances departmental transparency and operational efficiency through digitized reporting.",
+      "technologies": ["Flutter", "Dart", "REST API", "Admin Dashboard", "Cloud Storage"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838280/Splash_screen_heqc9x.png",
+      "images":["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838278/Home_Screen_nswsnx.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838276/Home_Screen_1_mytddo.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838275/Daily_job_Report_add_screen_gxzxcq.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838277/Single_Timecaed_screen_zfqqaa.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838278/Single_Timecard_Details_screen_1_dygtnx.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838282/Single_Timecard_Details_screen_p8o3sl.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838275/My_Report_Screen_mcf2zk.png"],
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "employee-mgmt",
+      "title": "Corporate Employee Management",
+      "description": "Corporate HR tool for managing employee attendance, leave requests, and performance monitoring.",
+      "details": "A dedicated internal tool developed to modernize human resource operations within a corporate environment.\n\nFunctionality Focus:\n• Attendance Tracking: Geofenced or manual check-in/out system for employees.\n• Leave Requests: Automated workflow for submitting and approving leave applications.\n• Performance Monitoring: Centralized view for management to oversee employee tasks and work status.\n• Secure Profile: Personal employee dashboards for record keeping and communication.\n\nThe application significantly reduces administrative overhead by digitizing routine HR processes.",
+      "technologies": ["Flutter", "Dart", "Firebase", "REST API", "Push Notification"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838671/Splash_Screen_qgolfq.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838672/Supervisor_mhrbar.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838673/Admin_Dashboard_Home_cedplg.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838756/Employee_Dashboard_iqkbyk.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/Project_detail_page_utzjuv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/All_Project_Screen_1_fgax75.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/Project_detail_page_utzjuv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838675/Purchase_request_g8qomd.png" ],
+      "featured": false,
+      "order": 8
     }
   ],
   "skills": [
