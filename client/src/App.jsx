@@ -13,7 +13,7 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/my_portfolio">
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
