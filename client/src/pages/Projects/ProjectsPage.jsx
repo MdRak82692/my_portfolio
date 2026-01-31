@@ -42,7 +42,7 @@ const ProjectsPage = () => {
                 <h3>{project.title}</h3>
                 <p className="line-clamp-3">{project.description}</p>
 
-                <div className="project-tech">
+                <div className="tags-container mb-1">
                   {project.technologies?.slice(0, 3).map((tech, i) => (
                     <span key={i} className="tech-tag">{tech}</span>
                   ))}

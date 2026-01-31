@@ -25,7 +25,10 @@ const SkillsPage = () => {
         <div className="skills-grid">
           {Object.entries(groupedSkills).map(([category, categorySkills]) => (
             <div key={category} className="skill-category-card card fade-in">
-              <h2 className="category-title text-primary">{category}</h2>
+              <div className="category-header">
+                <i className="fas fa-microchip text-accent"></i>
+                <h2 className="category-title">{category}</h2>
+              </div>
               <div className="skills-list">
                 {categorySkills.map((skill) => (
                   <div key={skill.name} className="skill-item">

@@ -69,6 +69,12 @@
       "icon": "fas fa-fire"
     },
     {
+      "name": "Node.js",
+      "level": 60,
+      "category": "Backend",
+      "icon": "fab fa-node-js"
+    },
+    {
       "name": "REST API Integration",
       "level": 90,
       "category": "Networking",
@@ -93,6 +99,12 @@
       "icon": "fab fa-app-store"
     },
     {
+      "name": "Google Play Store Deployment",
+      "level": 85,
+      "category": "DevOps",
+      "icon": "fab fa-google-play"
+    },
+    {
       "name": "Payment Integration",
       "level": 85,
       "category": "Fintech",
@@ -103,7 +115,7 @@
     {
       "company": "SM Technology",
       "position": "Junior Flutter Developer",
-      "location": "Dhaka, Bangladesh",
+      "location": "Banasree, Dhaka, Bangladesh",
       "startDate": "2025-03-01",
       "endDate": "",
       "current": true,
@@ -118,8 +130,7 @@
       "startDate": "2019-01-01",
       "endDate": "2023-12-31",
       "current": false,
-      "grade": "GPA: 3.77",
-      "description": "Focus on communication systems, electronics, and software integration."
+      "grade": "CGPA: 3.77/4.00"
     }
   ]
 }

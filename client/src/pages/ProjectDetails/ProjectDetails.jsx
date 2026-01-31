@@ -77,7 +77,7 @@ const ProjectDetails = () => {
           <div className="project-info fade-in">
             <h1 className="text-gradient mb-1">{project.title}</h1>
             
-            <div className="project-meta mb-2">
+            <div className="tags-container mb-2">
               {project.technologies?.map((tech, i) => (
                 <span key={i} className="tech-tag">{tech}</span>
               ))}

@@ -36,11 +36,6 @@ const EducationPage = () => {
                 <h3 className="edu-institution">{edu.institution}</h3>
                 <p className="edu-field italic text-secondary">{edu.fieldOfStudy}</p>
                 {edu.grade && <p className="edu-grade mt-1">Grade: <span className="text-primary">{edu.grade}</span></p>}
-                {edu.description && (
-                  <div className="edu-desc mt-2">
-                    {edu.description}
-                  </div>
-                )}
               </div>
             </div>
           ))}
