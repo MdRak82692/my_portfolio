@@ -174,7 +174,34 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "current": true,
-      "description": "• Developed and deployed live mobile applications.\n• Integrated Firebase authentication, real-time database, and APIs.\n• Collaborated with backend and UI/UX teams."
+      "description": "• Develop and maintain cross-platform mobile applications using Flutter and Firebase, ensuring high performance and scalability.\n• Collaborate with cross-functional teams to design and implement user-friendly solutions.\n• Contributed to the development of applications including Helper, Tennis, and Neowash, enhancing functionality and user experience."
+    },
+    {
+      "company": "Department of Electronics and Telecommunication Engineering, IIUC",
+      "position": "Teaching Assistant",
+      "location": "Chittagong, Bangladesh",
+      "startDate": "2022-01-01",
+      "endDate": "2023-12-31",
+      "current": false,
+      "description": "• Supported faculty in conducting laboratory sessions, grading assignments, and mentoring students in core technical subjects.\n• Facilitated hands-on learning in electronics and telecommunication concepts."
+    },
+    {
+      "company": "Grameenphone Ltd.",
+      "position": "Industrial Attachment Intern",
+      "location": "Bangladesh",
+      "startDate": "2022-06-01",
+      "endDate": "2022-09-30",
+      "current": false,
+      "description": "• Gained practical experience in telecommunications systems and network infrastructure.\n• Assisted in operational tasks, contributing to a deeper understanding of industry applications."
+    },
+    {
+      "company": "Fiverr & Freelancer.com",
+      "position": "Freelance Web Developer & Logo Designer",
+      "location": "Remote",
+      "startDate": "2018-01-01",
+      "endDate": "2020-12-31",
+      "current": false,
+      "description": "• Designed and delivered responsive websites and professional logos for international clients.\n• Managed multiple projects, ensuring timely delivery and client satisfaction."
     }
   ],
   "education": [
@@ -185,7 +212,27 @@
       "startDate": "2019-01-01",
       "endDate": "2023-12-31",
       "current": false,
-      "grade": "CGPA: 3.77/4.00"
+      "grade": "CGPA: 3.777/4.00"
+    },
+    {
+      "institution": "Kazem Ali School & College",
+      "degree": "Higher Secondary Certificate (HSC)",
+      "fieldOfStudy": "Science",
+      "location": "Chittagong",
+      "startDate": "2017-01-01",
+      "endDate": "2019-12-31",
+      "current": false,
+      "grade": "GPA: 3.67/5.00"
+    },
+    {
+      "institution": "Probartak School & College",
+      "degree": "Secondary School Certificate (SSC)",
+      "fieldOfStudy": "Science",
+      "location": "Chittagong",
+      "startDate": "2015-01-01",
+      "endDate": "2017-12-31",
+      "current": false,
+      "grade": "GPA: 4.64/5.00"
     }
   ]
 }

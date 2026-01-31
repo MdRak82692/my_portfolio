@@ -1,10 +1,11 @@
 .experience-page {
-  padding-top: 80px;
+  padding-top: 100px;
   min-height: 100vh;
+  padding-bottom: var(--section-padding);
 }
 
 .experience-timeline-container {
-  max-width: 900px;
+  max-width: 1200px; /* Increased from 1000px to expand layout */
   margin: 0 auto;
   position: relative;
   padding: 2rem 0;
@@ -13,79 +14,114 @@
 .experience-timeline-container::before {
   content: '';
   position: absolute;
-  left: 151px;
+  left: 291px; /* Increased to accommodate wider date side for single-line dates */
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--border);
+  background: linear-gradient(to bottom, transparent, var(--border), var(--border), transparent);
 }
 
 .experience-timeline-item {
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 
 .experience-date-side {
-  width: 140px;
+  width: 280px; /* Increased to 280px to ensure dates like "January 2018 - December 2020" fit in one line */
   text-align: right;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
+  flex-shrink: 0;
 }
 
 .date-badge {
-  background: var(--bg-card);
-  padding: 0.5rem 1rem;
+  background: rgba(99, 102, 241, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 0.7rem 1.25rem;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-light);
-  border: 1px solid var(--border);
-  white-space: nowrap;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: inline-block;
+  white-space: nowrap; /* Forced to be in one line */
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base);
+}
+
+.experience-timeline-item:hover .date-badge {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.05);
 }
 
 .timeline-dot {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: var(--primary);
   border: 3px solid var(--bg-dark);
   border-radius: 50%;
   position: absolute;
-  left: 144px;
-  top: 1.75rem;
+  left: 284px; /* Adjusted: 291 (line) - 7 (half dot) */
+  top: 1.65rem;
   z-index: 1;
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2), 0 0 15px var(--primary);
 }
 
 .experience-content-card {
   flex: 1;
-  margin-left: 40px;
-  padding: 2rem;
+  margin-left: 50px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  transition: all var(--transition-base);
 }
 
-.experience-content-card .position {
+.experience-content-card:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.position {
   font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.experience-content-card .company-name {
-  font-size: 1.2rem;
-  font-weight: 500;
+.company-name {
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
-.experience-content-card .location {
+.location {
   font-size: 0.9rem;
   color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .exp-description {
+  margin-top: 1.5rem;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   white-space: pre-wrap;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .experience-timeline-container::before {
     left: 20px;
   }
@@ -98,16 +134,21 @@
     width: auto;
     text-align: left;
     margin-left: 45px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     padding-top: 0;
   }
   
   .timeline-dot {
     left: 13px;
-    top: 5px;
+    top: 6px;
   }
   
   .experience-content-card {
     margin-left: 45px;
+    padding: 1.5rem;
+  }
+
+  .experience-content-card:hover {
+    transform: translateY(-5px);
   }
 }
