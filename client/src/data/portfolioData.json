@@ -108,6 +108,17 @@
       "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838672/Supervisor_mhrbar.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838673/Admin_Dashboard_Home_cedplg.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838756/Employee_Dashboard_iqkbyk.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/Project_detail_page_utzjuv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/All_Project_Screen_1_fgax75.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838674/Project_detail_page_utzjuv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1769838675/Purchase_request_g8qomd.png" ],
       "featured": false,
       "order": 8
+    },
+    {
+      "id": "trackpoint360",
+      "title": "TrackPoint360 – Event & Memory Tracker",
+      "description": "A comprehensive event and memory tracking application that allows users to capture moments with location-based media and manage data via CSV import/export.",
+      "details": "TrackPoint360 is designed for users who want to preserve their travel memories and special moments with precision. \n\nKey Features:\n• Location-Based Memories: Save events tied to specific coordinates with support for high-quality images, videos, and audio recordings.\n• Data Portability: Full support for CSV format, allowing users to export their entire history for backup or import existing data to keep their memories synchronized.\n• Multimedia Integration: Seamlessly attach and play back various media types directly within the event timeline.\n• Offline Capability: Robust local storage ensures that memories are captured even without an immediate internet connection.\n\nThe application focuses on providing a seamless user experience for travelers and memory-keepers alike.",
+      "technologies": ["Flutter", "Dart", "Firebase", "CSV Parser", "Google Maps API", "Hive/SQLite", "Provider", "Path Provider"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263279/Splash_Screen_r55aub.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263280/Mark_The_Spot_Screen_1_et6qfr.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263280/Event_Records_Screen_1_dufzc0.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263279/Setting_Screen_hey2sa.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263279/Import_Screen_pnftyv.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263279/Personal_Info_Screen_zhpks8.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263280/Mark_The_Spot_Screen_1_et6qfr.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1770263279/Import_Screen_pnftyv.png"],
+      "featured": true,
+      "order": 9
     }
   ],
   "skills": [
