@@ -96,6 +96,12 @@ const ProjectDetails = () => {
 
             <div className="project-actions-container mt-4">
               <div className="project-actions flex flex-wrap gap-3">
+                {project.webUrl && (
+                  <a href={project.webUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary store-btn">
+                    <i className="fas fa-globe"></i> 
+                    <span>Visit Website</span>
+                  </a>
+                )}
                 {project.playStoreUrl && (
                   <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary store-btn">
                     <i className="fab fa-google-play"></i> 

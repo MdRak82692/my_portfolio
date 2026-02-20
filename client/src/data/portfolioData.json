@@ -16,6 +16,18 @@
   },
   "projects": [
     {
+      "id": "blue-java",
+      "title": "Blue Java",
+      "description": "A secure lottery platform where users can purchase tickets and win prizes.",
+      "details": "Blue Java is a comprehensive lottery management system built with Next.js. \n\nKey Features:\n• Admin Dashboard: Create and manage lottery events, set prize pools, and publish results.\n• Ticket Purchase: Secure and seamless ticket purchasing process for users.\n• Automated Draws: Fair and transparent winner selection algorithm.\n• User accounts: Track purchase history and winnings.\n\nThe platform focuses on trust and user experience, providing a modern interface for lottery enthusiasts.",
+      "technologies": ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"],
+      "image": "https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574648/Entrants_Landing_Page_ihu3eg.png",
+      "images": ["https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574519/Browse_Raffall_bigluz.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574520/Winners_x4xd2h.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574519/User_Overview_bk7lez.png","https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574519/My_Tickets_vqmyua.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574519/My_Tickets_vqmyua.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574519/Create_Raffles_lkrfiq.png", "https://res.cloudinary.com/dwyxkaslc/image/upload/v1771574520/My_Raffles_dz1j8j.png"],
+      "webUrl": "https://www.bluejava.io/",
+      "featured": true,
+      "order": 1
+    },
+    {
       "id": "levaro",
       "title": "Levaro – Service Marketplace Application",
       "description": "Service provider & service booking platform where providers can create profiles, publish services, and manage requests.",
@@ -122,6 +134,12 @@
     }
   ],
   "skills": [
+    {
+      "name": "Next.js",
+      "level": 85,
+      "category": "Web Development",
+      "icon": "fas fa-code"
+    },
     {
       "name": "Flutter & Dart",
       "level": 95,
